@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" vocab="https://schema.org/" typeof="Person">
 <head>
     <meta charset="UTF-8">
     <title>CV Using HTML & CSS</title>
@@ -7,83 +7,87 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
+
 <div id="page">
     <div class="photo-and-name">
-        <img src="profile.jpg" class="photo" alt="Profile Picture">
+        <img src="profile.jpg" class="photo" property="image" alt="Profile Picture">
         <div class="contact-info-box">
-            <h1 class="name">Muhammad Ali Abbas</h1>
+            <h1 class="name" property="name">Muhammad Ali Abbas</h1>
             <br>
-            <h3 class="job-title">React Native Developer</h3>
-            <p class="contact-details">Phone: +92 3137490141 &nbsp; - &nbsp; Email: contact@aliabbas55506@gmail.com</p>
+            <h3 class="job-title" property="jobTitle">React Native Developer</h3>
+            <p class="contact-details">
+                <span property="telephone">Phone: +92 3137490141</span> &nbsp; - &nbsp; 
+                <span property="email">Email: contact@aliabbas55506@gmail.com</span>
+            </p>
         </div>
     </div>
+
     <div id="objective">
         <h3>Objective</h3>
-        <p>
-            To learn different technologies and create robust projects. From developing Management System Websites to Creating Dynamic Applications for mobile Devices. 
+        <p property="description">
+            To learn different technologies and create robust projects. From developing Management System Websites to Creating Dynamic Applications for mobile Devices.
         </p>
     </div>
+
     <div id="education">
         <h3>Education</h3>
         <table>
-            <tr class="school-1">
-                <td rowspan="2">Matriculation</td>
-                <td><b>85%</b></td>
+            <tr typeof="EducationalOccupationalCredential">
+                <td rowspan="2" property="name">Matriculation</td>
+                <td><b property="educationalLevel">85%</b></td>
             </tr>
-            <tr class="school-2">
-                <td><b>Fazaia Model Inter College Mushaf Sargodha</b</td>
-            </tr>
-            
-            <tr class="school-1">
-                <td rowspan="2">Intermediate</td>
-                <td><b>95%</b></td>
-            </tr>
-            <tr class="school-2">
-                <td><b>Superior Group of Colleges Sargodha</b></td>
-            </tr>
-            
             <tr>
-                <td style="width: 120px; color: gray;">Bachelors in Computer Science</td>
-                <td><b>University Of Sargodha</b> 3.25CGPA</td>
+                <td><b property="awardingInstitution">Fazaia Model Inter College Mushaf Sargodha</b></td>
+            </tr>
+
+            <tr typeof="EducationalOccupationalCredential">
+                <td rowspan="2" property="name">Intermediate</td>
+                <td><b property="educationalLevel">95%</b></td>
+            </tr>
+            <tr>
+                <td><b property="awardingInstitution">Superior Group of Colleges Sargodha</b></td>
+            </tr>
+
+            <tr typeof="EducationalOccupationalCredential">
+                <td property="name" style="width: 120px; color: gray;">Bachelors in Computer Science</td>
+                <td><b property="awardingInstitution">University Of Sargodha</b> <span property="educationalLevel">3.25 CGPA</span></td>
             </tr>
         </table>
     </div>
+
     <div id="work">
         <h3>Projects</h3>
         <table>
-            <tr class="work-1">
-                <td>M-tag Management System</td>
-                <td>A tag assinging Website that stores data regarding vehicles, allowing CRUD operations</td>
+            <tr typeof="Project">
+                <td property="name">M-tag Management System</td>
+                <td property="description">A tag assigning website that stores data regarding vehicles, allowing CRUD operations</td>
             </tr>
-            <tr class="work-2">
-                <td>Student Management System</td>
-                <td>Allows admins and students to access their accounts and make changes as required. Admins can manage all the students data</td>
+            <tr typeof="Project">
+                <td property="name">Student Management System</td>
+                <td property="description">Allows admins and students to access their accounts and make changes as required. Admins can manage all the students' data</td>
             </tr>
-            
-            <tr class="work-2">
-                <td>Video and Voice Call App</td>
-                <td>Allows users to enter a unique ID and contact each other through that ID</td>
+            <tr typeof="Project">
+                <td property="name">Video and Voice Call App</td>
+                <td property="description">Allows users to enter a unique ID and contact each other through that ID</td>
             </tr>
- 
         </table>
     </div>
+
     <div id="bio-data">
         <h3>Skills</h3>
         <table>
             <tr>
                 <td>Languages</td>
-                <td><b>HTML | CSS | JAVASCRIPT | C++ | TYPESCRIPT | JAVA </b></td>
+                <td property="knowsAbout"><b>HTML | CSS | JavaScript | C++ | TypeScript | Java </b></td>
             </tr>
             <tr>
                 <td>Video Editing</td>
-                <td><b>Adobe Premier Pro</b></td>
+                <td property="knowsAbout"><b>Adobe Premiere Pro</b></td>
             </tr>
             <tr>
                 <td>Photo Editing</td>
-                <td><b>Adobe Photoshop</b></td>
+                <td property="knowsAbout"><b>Adobe Photoshop</b></td>
             </tr>
-            
         </table>
     </div>
 </div>
